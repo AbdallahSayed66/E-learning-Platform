@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعادلات الخطية في مجهول واحد | الرياضيات - الصف الأول الثانوي | EduMotion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assistant/css/lesson.css">
+    <style>
+        /* أنماط النوافذ المنبثقة */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .payment-method {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-method.active {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 108, 247, 0.1);
+        }
+
+        .payment-method img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .payment-method span {
+            display: block;
+            font-size: 14px;
+        }
+
+        .payment-form {
+            display: none;
+        }
+
+        .payment-form.active {
+            display: block;
+        }
+
+        .payment-instructions {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-note {
+            font-size: 13px;
+            color: #777;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page-loader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- شريط التنقل الحديث -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <div class="nav-logo" id="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                </svg>
+                <span>إديو</span>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" class="nav-link" data-text="الرئيسية">الرئيسية</a>
+                
+                <a href="/index.html" class="nav-link" data-text="عن المنصة">عن المنصة</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="login.html" class="nav-btn login-btn" data-text="تسجيل الدخول">
+                    <span>تسجيل الدخول</span>
+                </a>
+                <a href="register.html" class="nav-btn main-btn" data-text="تسجيل حساب جديد">
+                    <span>تسجيل حساب جديد</span>
+                </a>
+            </div>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <header class="course-header">
+        <div class="container">
+            <div class="course-header-container">
+                <div class="course-thumbnail">
+                    <div class="course-badge">الأكثر مبيعاً</div>
+                    <img src="assistant/img/6b21731b-7c1a-4287-8fcf-d1e7a14efd2a-removebg-preview.png" alt="المعادلات الخطية">
+                </div>
+                
+                <div class="course-header-content">
+                    <h1 class="course-title">المعادلات الخطية في مجهول واحد</h1>
+                    
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>1,250 طالب</span>
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>5 ساعات</span>
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>مبتدئ</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(124 تقييم)</span>
+                    </div>
+                    
+                    <div class="course-price">
+                        <span>50 ج.م</span>
+                        <span class="course-price old">70 ج.م</span>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <a href="#" class="btn btn-primary" id="code-purchase-btn"> ادخال كود شراء</a>
+                        <a href="#" class="btn btn-secondary" id="online-payment-btn">شراء اونلاين</a>
+                    </div>
+                    
+                    <p class="course-description">
+                        شرح مفصل لأنواع المعادلات الخطية وطرق حلها مع تطبيقات عملية وتمارين متنوعة. هذا الكورس سيأخذك من الأساسيات إلى المستوى المتوسط في فهم وحل المعادلات الخطية بمجهول واحد، مع أمثلة تطبيقية من الحياة الواقعية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <section class="course-content-section">
+        <div class="container">
+            <div class="course-content-container" style="display: flex; gap: 30px;">
+                <div class="course-main-content" style="flex: 2;">
+                    <div class="course-tabs">
+                        <div class="course-tab active" data-tab="overview">نظرة عامة</div>
+                        <div class="course-tab" data-tab="curriculum">المحتويات</div>
+                        <!-- <div class="course-tab" data-tab="instructor">المدرس</div>
+                        <div class="course-tab" data-tab="reviews">التقييمات</div> -->
+                    </div>
+                    
+                    <div class="tab-content active" id="overview">
+                        <h2 style="margin-bottom: 20px;">عن هذا الكورس</h2>
+                        <p style="margin-bottom: 20px; line-height: 1.8;">
+                            هذا الكورس هو مقدمة شاملة للمعادلات الخطية في مجهول واحد، وهو مصمم لطلاب الصف الأول الثانوي الذين يرغبون في بناء أساس قوي في الجبر. سنبدأ من الأساسيات وننتقل إلى المفاهيم الأكثر تقدمًا، مع التركيز على الفهم العميق والتطبيق العملي.
+                        </p>
+                        
+                        <h3 style="margin: 25px 0 15px;">ما سوف تتعلمه</h3>
+                        <ul style="list-style: none; margin-bottom: 30px; line-height: 1.8;">
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                فهم مفهوم المعادلة الخطية ومكوناتها
+                            </li>
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                حل المعادلات الخطية بمجهول واحد
+                            </li>
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                تطبيق المعادلات على مسائل حياتية
+                            </li>
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                تمثيل المعادلات بيانيًا
+                            </li>
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                حل مسائل متقدمة تتضمن معادلات خطية
+                            </li>
+                        </ul>
+                        
+                        <h3 style="margin: 25px 0 15px;">متطلبات الكورس</h3>
+                        <ul style="list-style: none; margin-bottom: 30px; line-height: 1.8;">
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                معرفة أساسية بالعمليات الحسابية
+                            </li>
+                            <li style="margin-bottom: 10px; padding-right: 20px; position: relative;">
+                                <i class="fas fa-check" style="color: var(--success-color); position: absolute; right: 0;"></i>
+                                فهم أساسي للمتغيرات والعبارات الجبرية
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-content" id="curriculum">
+                        <h2 style="margin-bottom: 20px;">محتوى الكورس</h2>
+                        
+                        <ul class="syllabus-list">
+                            <li class="syllabus-item">
+                                <div class="syllabus-item-header">
+                                    <h3 class="syllabus-item-title">الوحدة الأولى: مقدمة إلى المعادلات الخطية</h3>
+                                    <span class="syllabus-item-duration">4 دروس • 45 دقيقة</span>
+                                </div>
+                                <div class="syllabus-item-content">
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>مقدمة إلى المعادلات الخطية</span>
+                                        </div>
+                                        <span class="lesson-duration">12 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>مكونات المعادلة الخطية</span>
+                                        </div>
+                                        <span class="lesson-duration">10 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>حل المعادلات البسيطة</span>
+                                        </div>
+                                        <span class="lesson-duration">15 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="fas fa-question-circle"></i>
+                                            <span>اختبار قصير</span>
+                                        </div>
+                                        <span class="lesson-duration">8 دقيقة</span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="syllabus-item">
+                                <div class="syllabus-item-header">
+                                    <h3 class="syllabus-item-title">الوحدة الثانية: طرق حل المعادلات</h3>
+                                    <span class="syllabus-item-duration">5 دروس • 60 دقيقة</span>
+                                </div>
+                                <div class="syllabus-item-content">
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>طريقة الموازنة</span>
+                                        </div>
+                                        <span class="lesson-duration">15 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>التخلص من الأقواس</span>
+                                        </div>
+                                        <span class="lesson-duration">12 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>التخلص من الكسور</span>
+                                        </div>
+                                        <span class="lesson-duration">10 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>حل المعادلات مع متغيرات في الطرفين</span>
+                                        </div>
+                                        <span class="lesson-duration">15 دقيقة</span>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <div class="lesson-title">
+                                            <i class="fas fa-question-circle"></i>
+                                            <span>تمارين تطبيقية</span>
+                                        </div>
+                                        <span class="lesson-duration">8 دقيقة</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-content" id="instructor">
+                        <h2 style="margin-bottom: 20px;">مدرس الكورس</h2>
+                        
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="أحمد محمد">
+                            </div>
+                            <div class="instructor-info">
+                                <h3>أحمد محمد</h3>
+                                <p class="instructor-title">مدرس رياضيات معتمد</p>
+                                <p class="instructor-bio">
+                                    أحمد محمد حاصل على ماجستير في الرياضيات التطبيقية مع أكثر من 10 سنوات خبرة في تدريس الرياضيات لطلاب الثانوية العامة. يتميز بأسلوب شرح واضح وسلس يجعل المفاهيم المعقدة سهلة الفهم.
+                                </p>
+                                <div class="instructor-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="reviews">
+                        <h2 style="margin-bottom: 20px;">تقييمات الطلاب</h2>
+                        
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-user">
+                                        <div class="review-user-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة أحمد">
+                                        </div>
+                                        <div class="review-user-info">
+                                            <h4>سارة أحمد</h4>
+                                            <span class="review-date">منذ أسبوعين</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    الكورس رائع جدًا، الأستاذ أحمد يشرح بطريقة مبسطة وسهلة. استفدت كثيرًا من التمارين التطبيقية والاختبارات القصيرة التي تساعد على ترسيخ المعلومات.
+                                </div>
+                            </div>
+                            
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-user">
+                                        <div class="review-user-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="محمد علي">
+                                        </div>
+                                        <div class="review-user-info">
+                                            <h4>محمد علي</h4>
+                                            <span class="review-date">منذ شهر</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    شرح ممتاز للمفاهيم الأساسية، لكن أتمنى إضافة المزيد من الأمثلة على المعادلات الأكثر تعقيدًا. بشكل عام الكورس مفيد جدًا للطلاب المبتدئين.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar" style="flex: 1;">
+                    <h3 class="sidebar-title">اشترك في الكورس الآن</h3>
+                    
+                    <div class="price-container">
+                        <span class="current-price">50 ج.م</span>
+                        <span class="old-price">70 ج.م</span>
+                    </div>
+                    
+                    <ul class="includes-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>وصول كامل طول الترم</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>امتحانات شامله </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>تمارين تطبيقية وواجبات منزليه</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>دعم فني متواجد 24 ساعه</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="sidebar-actions">
+                        <a href="#" class="btn btn-primary" id="sidebar-code-btn">ادخل كود شراء</a>
+                        <a href="#" class="btn buy-now" id="sidebar-payment-btn">شراء اونلاين</a>
+
+                        <a href="1/11.html"  >نسخه تجريبيه</a
+                        <p class="money-back">اذا تم الشراء لا يمكن استرجاع الاموال مره اخري</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        >
+    </section>
+
+    <!-- نافذة الشراء بكود -->
+    <div class="modal" id="code-purchase-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>الشراء باستخدام كود</h3>
+            <form id="code-purchase-form">
+                <div class="form-group">
+                    <label for="purchase-code">أدخل كود الشراء</label>
+                    <input type="text" id="purchase-code" required placeholder="XXXX-XXXX-XXXX">
+                </div>
+                <button type="submit" class="btn btn-primary">تفعيل الكورس</button>
+                <div class="form-note">
+                    ملاحظة: كل كود صالح لاستخدام واحد فقط
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة الدفع الإلكتروني -->
+    <div class="modal" id="online-payment-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>الدفع الإلكتروني</h3>
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="credit">
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="بطاقة ائتمان">
+                    <span>بطاقة ائتمان</span>
+                </div>
+                <div class="payment-method" data-method="vodafone">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="فودافون كاش">
+                    <span>فودافون كاش</span>
+                </div>
+                <div class="payment-method" data-method="fawry">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504926.png" alt="فوري">
+                    <span>فوري</span>
+                </div>
+            </div>
+            
+            <form id="credit-payment-form" class="payment-form active">
+                <div class="form-group">
+                    <label for="card-number">رقم البطاقة</label>
+                    <input type="text" id="card-number" required placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">تاريخ الانتهاء</label>
+                        <input type="text" id="expiry-date" required placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">اسم حامل البطاقة</label>
+                    <input type="text" id="card-name" required placeholder="كما هو مدون على البطاقة">
+                </div>
+                <button type="submit" class="btn btn-primary">دفع 50 ج.م</button>
+            </form>
+            
+            <form id="vodafone-payment-form" class="payment-form">
+                <div class="form-group">
+                    <label for="vodafone-number">رقم فودافون كاش</label>
+                    <input type="text" id="vodafone-number" required placeholder="01XXXXXXXXX">
+                </div>
+                <div class="payment-instructions">
+                    ستصلك رسالة على هاتفك لتأكيد الدفع
+                </div>
+                <button type="submit" class="btn btn-primary">دفع 50 ج.م</button>
+            </form>
+            
+            <form id="fawry-payment-form" class="payment-form">
+                <div class="form-group">
+                    <label>اختر طريقة الدفع عبر فوري</label>
+                    <select id="fawry-option" class="form-control">
+                        <option value="atm">صراف آلي</option>
+                        <option value="kiosk">كيوسك</option>
+                        <option value="branch">فرع البنك</option>
+                    </select>
+                </div>
+                <div class="payment-instructions">
+                    ستحصل على كود فوري يمكنك استخدامه لأداء الدفع
+                </div>
+                <button type="submit" class="btn btn-primary">استخراج كود الدفع</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                        <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                    </svg>
+                    <span>إديو</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>المنصة</h4>
+                        <a href="#">عن المنصة</a>
+                        <a href="#">المدرسون</a>
+                        <a href="#">الأسعار</a>
+                        <a href="#">المميزات</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>الكورسات</h4>
+                        <a href="#">الصف الأول</a>
+                        <a href="#">الصف الثاني</a>
+                        <a href="#">الصف الثالث</a>
+                        <a href="#">الباقات</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>الدعم</h4>
+                        <a href="#">الأسئلة الشائعة</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <span class="copyright-inner">
+                        <p> <a href="#">Abdallah Sayed</a>&copy; Develop By</p>
+                    </span>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // فتح وإغلاق النوافذ المنبثقة
+            $('#code-purchase-btn, #sidebar-code-btn').click(function(e) {
+                e.preventDefault();
+                $('#code-purchase-modal').fadeIn();
+            });
+            
+            $('#online-payment-btn, #sidebar-payment-btn').click(function(e) {
+                e.preventDefault();
+                $('#online-payment-modal').fadeIn();
+            });
+            
+            $('.close-modal').click(function() {
+                $(this).closest('.modal').fadeOut();
+            });
+            
+            $(window).click(function(e) {
+                if ($(e.target).hasClass('modal')) {
+                    $('.modal').fadeOut();
+                }
+            });
+            
+            // تغيير طريقة الدفع
+            $('.payment-method').click(function() {
+                $('.payment-method').removeClass('active');
+                $(this).addClass('active');
+                
+                const method = $(this).data('method');
+                $('.payment-form').removeClass('active');
+                $(`#${method}-payment-form`).addClass('active');
+            });
+            
+            // معالجة الشراء بكود
+            $('#code-purchase-form').submit(function(e) {
+                e.preventDefault();
+                const code = $('#purchase-code').val().trim();
+                
+                if (code.length === 0) {
+                    alert('الرجاء إدخال كود الشراء');
+                    return;
+                }
+                
+                // هنا يمكنك إضافة اتصال بالسيرفر للتحقق من الكود
+                // هذا مثال فقط للتوضيح
+                $.ajax({
+                    url: '/api/validate-code',
+                    method: 'POST',
+                    data: { code: code },
+                    success: function(response) {
+                        if (response.valid) {
+                            alert('تم تفعيل الكورس بنجاح!');
+                            $('#code-purchase-modal').fadeOut();
+                            // يمكنك هنا توجيه المستخدم أو تحديث واجهة المستخدم
+                        } else {
+                            alert('كود غير صالح أو مستخدم من قبل');
+                        }
+                    },
+                    error: function() {
+                        alert('حدث خطأ أثناء التحقق من الكود، الرجاء المحاولة لاحقاً');
+                    }
+                });
+            });
+            
+            // معالجة الدفع بالبطاقة
+            $('#credit-payment-form').submit(function(e) {
+                e.preventDefault();
+                
+                // هنا يمكنك إضافة التحقق من بيانات البطاقة
+                const cardNumber = $('#card-number').val().trim();
+                const expiryDate = $('#expiry-date').val().trim();
+                const cvv = $('#cvv').val().trim();
+                const cardName = $('#card-name').val().trim();
+                
+                if (!cardNumber || !expiryDate || !cvv || !cardName) {
+                    alert('الرجاء إدخال جميع بيانات البطاقة');
+                    return;
+                }
+                
+                // محاكاة عملية الدفع
+                $('#online-payment-modal').fadeOut();
+                alert('جاري معالجة الدفع...');
+                
+                // هنا يمكنك إضافة اتصال ببوابة الدفع
+                setTimeout(function() {
+                    alert('تمت عملية الدفع بنجاح! تم تفعيل الكورس.');
+                }, 2000);
+            });
+            
+            // معالجة الدفع بفودافون كاش
+            $('#vodafone-payment-form').submit(function(e) {
+                e.preventDefault();
+                const phone = $('#vodafone-number').val().trim();
+                
+                if (!phone || phone.length !== 11) {
+                    alert('الرجاء إدخال رقم هاتف صحيح');
+                    return;
+                }
+                
+                $('#online-payment-modal').fadeOut();
+                alert('سيتم إرسال رسالة تأكيد إلى رقمك، الرجاء متابعتها لإتمام الدفع');
+            });
+            
+            // معالجة الدفع بفوري
+            $('#fawry-payment-form').submit(function(e) {
+                e.preventDefault();
+                const option = $('#fawry-option').val();
+                
+                $('#online-payment-modal').fadeOut();
+                alert('تم إنشاء كود الدفع: 123456789\nيمكنك استخدامه في أي منفذ فوري');
+            });
+        });
+    </script>
+    <script src="/assistant/js/lesson.js"></script>
+</body>
+</html>

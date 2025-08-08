@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل جديد | EduMotion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assistant/css/register.css">
+</head>
+<body>
+     <!-- Loader -->
+    <div id="page-loader">
+        <div class="loader"></div>
+    </div>
+       <nav class="modern-nav">
+        <div class="nav-container">
+            <div class="nav-logo" id="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                </svg>
+                <span>إديو</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="الرئيسية">الرئيسية</a>
+                <a href="index.html" class="nav-link" data-text="الكورسات">الكورسات</a>
+                <a href="index.html" class="nav-link" data-text="عن المنصة">عن المنصة</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="login.html" class="nav-btn login-btn" data-text="تسجيل الدخول">
+                    <span>تسجيل الدخول</span>
+                </a>
+                <a href="register.html" class="nav-btn main-btn" data-text="تسجيل حساب جديد">
+                    <span>تسجيل حساب جديد</span>
+                </a>
+            </div>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- نموذج التسجيل -->
+    <div class="auth-container">
+        <form class="auth-form" id="registerForm">
+            <div class="form-header">
+                <h2 class="form-title">إنشاء حساب جديد</h2>
+                <p class="form-subtitle">انضم إلى منصة Edu للتعليم الإلكتروني</p>
+            </div>
+            
+            <!-- الأسماء -->
+            <div class="input-grid">
+                <div class="input-group">
+                    <input type="text" class="input-field" required>
+                    <label class="input-label">الاسم الأول</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" class="input-field" required>
+                    <label class="input-label">الاسم الثاني</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" class="input-field" required>
+                    <label class="input-label">الاسم الأخير</label>
+                </div>
+            </div>
+            
+            <!-- البريد وكلمة المرور -->
+            <div class="input-group">
+                <input type="email" class="input-field" required>
+                <label class="input-label">البريد الإلكتروني</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" class="input-field" required>
+                <label class="input-label">كلمة المرور</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" class="input-field" required>
+                <label class="input-label">تأكيد كلمة المرور</label>
+            </div>
+            
+            <!-- المحافظة -->
+            <div class="select-group">
+                <span class="select-label">المحافظة</span>
+                <select class="select-field" required>
+                    <option value="" disabled selected>اختر محافظتك</option>
+                    <option value="cairo">القاهرة</option>
+                    <option value="alex">الإسكندرية</option>
+                    <option value="giza">الجيزة</option>
+                    <option value="sharkia">الشرقية</option>
+                    <option value="dakahlia">الدقهلية</option>
+                    <option value="gharbia">الغربية</option>
+                </select>
+            </div>
+            
+            <!-- طريقة التعليم -->
+            <div class="options-container">
+                <span class="options-title">طريقة التعليم المفضلة</span>
+                <div class="options-group">
+                    <div class="option-item">
+                        <input type="radio" id="reg-online" name="education_type" value="online" checked>
+                        <label for="reg-online">أونلاين</label>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="reg-center" name="education_type" value="center">
+                        <label for="reg-center">السنتر</label>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="reg-both" name="education_type" value="both">
+                        <label for="reg-both">الاثنين معًا</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- نوع الحساب -->
+            <div class="options-container">
+                <span class="options-title">نوع الحساب</span>
+                <div class="options-group">
+                    <div class="option-item">
+                        <input type="radio" id="student" name="account_type" value="student" checked>
+                        <label for="student">طالب</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر التسجيل -->
+            <button type="submit" class="submit-btn">تسجيل الحساب</button>
+            
+            <!-- روابط إضافية -->
+            <div class="form-footer">
+                <p>هل لديك حساب بالفعل؟ <a href="login.html">سجل الدخول الآن</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // التحقق من تطابق كلمات المرور
+            const password = document.querySelector('input[type="password"]').value;
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+            
+            if (password !== confirmPassword) {
+                alert('كلمتا المرور غير متطابقتين');
+                return;
+            }
+            
+            // هنا يمكنك إضافة كود إرسال البيانات للخادم
+            alert('تم تسجيل الحساب بنجاح! سيتم توجيهك إلى لوحة التحكم');
+            // window.location.href = 'dashboard.html';
+        });
+    </script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            fetch('https://your-backend.com/register.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    window.location.href = "login.html";
+                } else {
+                    alert(data.message);
+                }
+            });
+        });
+    </script>
+
+    <script src="assistant/js/master.js"></script>
+</body>
+</html>

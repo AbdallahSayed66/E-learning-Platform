@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعادلات الخطية في مجهول واحد | محتوى الكورس | EduMotion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assistant/css/11.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <div class="nav-logo" id="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                </svg>
+                <span>إديو</span>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" class="nav-link" data-text="الرئيسية">الرئيسية</a>
+                
+                <a href="/index.html" class="nav-link" data-text="عن المنصة">عن المنصة</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="login.html" class="nav-btn login-btn" data-text="تسجيل الدخول">
+                    <span>تسجيل الدخول</span>
+                </a>
+                <a href="register.html" class="nav-btn main-btn" data-text="تسجيل حساب جديد">
+                    <span>تسجيل حساب جديد</span>
+                </a>
+            </div>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة -->
+    <main class="course-content-page">
+        <div class="container">
+            <div class="course-layout">
+                <!-- الشريط الجانبي -->
+                <aside class="course-sidebar">
+                    <div class="course-cover">
+                        <img src="assistant/img/6b21731b-7c1a-4287-8fcf-d1e7a14efd2a-removebg-preview.png" alt="غلاف الكورس">
+                    </div>
+                    
+                    <div class="course-sidebar-card">
+                        <div class="sidebar-header">
+                            <span>محتوى الكورس</span>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="progress-container">
+                                <div class="progress-text">
+                                    <span>تقدمك في الكورس</span>
+                                    <span class="progress-percent">35%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <ul class="sidebar-menu">
+                                <li>
+                                    <a href="#" class="active">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>مقدمة إلى المعادلات الخطية</span>
+                                        <span class="lesson-duration">12 دقيقة</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>مكونات المعادلة الخطية</span>
+                                        <span class="lesson-duration">10 دقيقة</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>حل المعادلات البسيطة</span>
+                                        <span class="lesson-duration">15 دقيقة</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>اختبار قصير</span>
+                                        <span class="lesson-duration">8 دقيقة</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>طريقة الموازنة</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>التخلص من الأقواس</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>التخلص من الكسور</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>اختبار الوحدة الثانية</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-tasks"></i>
+                                        <span>الواجب العملي</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="locked-lesson">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>شهادة الإتمام</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="course-sidebar-card">
+                        <div class="sidebar-header">
+                            <span>المدرس</span>
+                        </div>
+                        <div class="sidebar-content">
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 0 20px 15px;">
+                                <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden;">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="المدرس" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 16px; margin-bottom: 5px;">أحمد محمد</h4>
+                                    <p style="font-size: 14px; color: var(--text-light);">مدرس رياضيات معتمد</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="width: calc(100% - 40px); margin: 0 20px 15px;">
+                                <i class="far fa-user"></i> عرض الملف الشخصي
+                            </a>
+                        </div>
+                    </div> -->
+                </aside>
+                
+                <!-- المحتوى الرئيسي -->
+                <div class="course-main-content">
+                    <div class="course-header-card">
+                        <div class="breadcrumb">
+                            <a href="/Grades/first-year.html">الكورسات</a>
+                            <i class="fas fa-chevron-left"></i>
+                            <a href="#">الرياضيات</a>
+                            <i class="fas fa-chevron-left"></i>
+                            <span>المعادلات الخطية</span>
+                        </div>
+                        
+                        <h1 class="course-title">مقدمة إلى المعادلات الخطية</h1>
+                        <p class="course-description">
+                            في هذا الدرس سنتعرف على مفهوم المعادلة الخطية ومكوناتها الأساسية وكيفية حلها بطريقة بسيطة.
+                        </p>
+                        
+                        <div class="course-actions">
+                            <button class="btn btn-white btn-sm">
+                                <i class="far fa-bookmark"></i> حفظ
+                            </button>
+                            <button class="btn btn-white btn-sm">
+                                <i class="fas fa-share-alt"></i> مشاركة
+                            </button>
+                            <button class="btn btn-white btn-sm">
+                                <i class="fas fa-flag"></i> الإبلاغ
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- قسم الفيديو -->
+                    <div class="video-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play"></i>
+                                <h3>اضغط للبدء</h3>
+                            </div>
+                            <!-- <iframe class="video-player" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+                        </div>
+                        
+                        <div class="video-info">
+                            <h2 class="video-title">مقدمة إلى المعادلات الخطية</h2>
+                            <div class="video-meta">
+                                <div class="video-meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>12 دقيقة</span>
+                                </div>
+                                <div class="video-meta-item">
+                                    <i class="far fa-eye"></i>
+                                    <span>1,245 مشاهدة</span>
+                                </div>
+                                <div class="video-meta-item">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>15 مارس 2023</span>
+                                </div>
+                            </div>
+                            <p class="video-description">
+                                في هذا الفيديو التعليمي، سنستكشف الأساسيات الأولى للمعادلات الخطية. سنبدأ بتعريف المعادلة الخطية ومكوناتها الرئيسية، ثم ننتقل إلى شرح كيفية حل المعادلات البسيطة بمجهول واحد. سنستخدم أمثلة عملية لتوضيح المفاهيم الأساسية.
+                            </p>
+                            <div class="video-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="far fa-thumbs-up"></i> أعجبني (124)
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="far fa-comment"></i> تعليق (23)
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-question-circle"></i> سؤال
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- قسم الملحقات -->
+                    <div class="attachments-card">
+                        <h3 class="section-title">
+                            <i class="fas fa-paperclip"></i>
+                            <span>الملفات المرفقة</span>
+                        </h3>
+                        <ul class="resources-list">
+                            <li class="resource-item">
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <span class="resource-name">ملخص الدرس</span>
+                                        <div class="resource-meta">
+                                            <span>PDF</span>
+                                            <span>2.4 MB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm" download>
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </li>
+                            <li class="resource-item">
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-file-excel"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <span class="resource-name">تمارين إضافية</span>
+                                        <div class="resource-meta">
+                                            <span>Excel</span>
+                                            <span>1.8 MB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm" download>
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- قسم التعليقات -->
+                    <div class="comments-card">
+                        <div class="comments-header">
+                            <div class="comments-title">التعليقات</div>
+                            <div class="comments-count">23 تعليق</div>
+                        </div>
+                        
+                        <form class="comment-form">
+                            <div class="form-group">
+                                <label class="form-label">أضف تعليقك</label>
+                                <textarea class="form-textarea" placeholder="اكتب تعليقك هنا..."></textarea>
+                            </div>
+                            <div class="comment-submit">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> نشر التعليق
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <ul class="comments-list">
+                            <li class="comment-item">
+                                <div class="comment-header">
+                                    <div class="comment-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة">
+                                    </div>
+                                    <div>
+                                        <div class="comment-user">سارة أحمد</div>
+                                        <div class="comment-date">منذ يومين</div>
+                                    </div>
+                                </div>
+                                <div class="comment-content">
+                                    الشرح واضح جدًا ومفيد، خاصة الجزء الخاص بتطبيق المعادلات على مسائل حياتية. شكرًا لك أستاذ أحمد على المجهود الرائع.
+                                </div>
+                                <div class="comment-actions">
+                                    <div class="comment-action">
+                                        <i class="far fa-thumbs-up"></i>
+                                        <span>12</span>
+                                    </div>
+                                    <div class="comment-action">
+                                        <i class="far fa-thumbs-down"></i>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="comment-action">
+                                        <i class="far fa-comment"></i>
+                                        <span>رد</span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="comment-item">
+                                <div class="comment-header">
+                                    <div class="comment-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="محمد">
+                                    </div>
+                                    <div>
+                                        <div class="comment-user">محمد علي</div>
+                                        <div class="comment-date">منذ 5 أيام</div>
+                                    </div>
+                                </div>
+                                <div class="comment-content">
+                                    أتمنى لو تزيدون عدد الأمثلة في الجزء الخاص بحل المعادلات البسيطة. أشكركم على المجهود.
+                                </div>
+                                <div class="comment-actions">
+                                    <div class="comment-action">
+                                        <i class="far fa-thumbs-up"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <div class="comment-action">
+                                        <i class="far fa-thumbs-down"></i>
+                                        <span>0</span>
+                                    </div>
+                                    <div class="comment-action">
+                                        <i class="far fa-comment"></i>
+                                        <span>رد</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- التنقل بين الدروس -->
+                    <div class="lesson-navigation">
+                        <a href="#" class="nav-btn nav-btn-prev">
+                            <i class="fas fa-arrow-right"></i>
+                            <div>
+                                <div class="nav-lesson-title">الدرس السابق</div>
+                                <div>مقدمة الكورس</div>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-btn nav-btn-next">
+                            <div>
+                                <div class="nav-lesson-title">الدرس التالي</div>
+                                <div>مكونات المعادلة الخطية</div>
+                            </div>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- فوتر الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">EduMotion</h3>
+                    <p class="footer-about">منصة تعليمية متكاملة تهدف إلى تقديم أفضل تجربة تعلم لطلاب الثانوية العامة في مصر.</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">الكورسات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الرياضيات</a></li>
+                        <li><a href="#">الفيزياء</a></li>
+                        <li><a href="#">الكيمياء</a></li>
+                        <li><a href="#">اللغة العربية</a></li>
+                        <li><a href="#">اللغة الإنجليزية</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الصفحة الرئيسية</a></li>
+                        <li><a href="#">المدرسون</a></li>
+                        <li><a href="#">المجتمع</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة، مصر</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@edumotion.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2023 <a href="#" class="Abdallah">EduMotion</a>. تصميم وتطوير <a href="#" class="Abdallah">Abdallah</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تأثير التمرير لشريط التنقل
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // محاكاة تغيير التقدم
+            setTimeout(() => {
+                const progressFill = document.querySelector('.progress-fill');
+                progressFill.style.width = '65%';
+                document.querySelector('.progress-percent').textContent = '65%';
+            }, 1000);
+            
+            // محاكاة تشغيل الفيديو
+            const videoPlaceholder = document.querySelector('.video-placeholder');
+            if (videoPlaceholder) {
+                videoPlaceholder.addEventListener('click', function() {
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i><h3>جاري تحميل الفيديو...</h3>';
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                        // في الواقع الفعلي، هنا سيتم إظهار الفيديو الحقيقي
+                    }, 1500);
+                });
+            }
+            
+            // محاكاة إرسال التعليق
+            const commentForm = document.querySelector('.comment-form');
+            if (commentForm) {
+                commentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const textarea = this.querySelector('textarea');
+                    if (textarea.value.trim() === '') return;
+                    
+                    alert('تم إضافة تعليقك بنجاح وسيظهر بعد المراجعة');
+                    textarea.value = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

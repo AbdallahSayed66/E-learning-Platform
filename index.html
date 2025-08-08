@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة إديو - التعليم الثانوي الحديث">
+    <meta name="keywords" content="إديو, منصة تعليمية, التعليم الثانوي, كورسات, مدرسين, تفاعلية">
+    <meta name="author" content="Abdallah Sayed">
+    <link rel="icon" href="assistant/images/6b21731b-7c1a-4287-8fcf-d1e7a14efd2a-removebg-preview.png" type="image/x-icon">
+    <title>إديو - منصة التعليم الثانوي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assistant/css/style.css">
+</head>
+<body>
+    <!-- مؤشر التحميل -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">EduMotion</div>
+    </div>
+
+    <!-- شريط التنقل الحديث -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <div class="nav-logo" id="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                </svg>
+                <span>إديو</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="الرئيسية">الرئيسية</a>
+                <a href="#grades" class="nav-link" data-text="الكورسات">الكورسات</a>
+                <a href="#features" class="nav-link" data-text="عن المنصة">عن المنصة</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="login.html" class="nav-btn login-btn" data-text="تسجيل الدخول">
+                    <span>تسجيل الدخول</span>
+                </a>
+                <a href="register.html" class="nav-btn main-btn" data-text="تسجيل حساب جديد">
+                    <span>تسجيل حساب جديد</span>
+                </a>
+            </div>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو الحديث -->
+    <section class="modern-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-word">التعليم</span>
+                    <span class="title-word">الثانوي</span>
+                    <span class="title-word">بمفهوم</span>
+                    <span class="title-word">حديث</span>
+                </h1>
+                <p class="hero-subtitle">منصة متكاملة تقدم تجربة تعليمية تفاعلية لطلاب الثانوية العامة</p>
+                <div class="hero-buttons">
+                    <a href="#grades" class="hero-btn primary-btn">
+                        <span>إبدأ التعلم</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="#" class="hero-btn secondary-btn">
+                        <span>تصفح الكورسات</span>
+                        <i class="fas fa-book-open"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5000">0</div>
+                        <div class="stat-label">طالب مسجل</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="120">0</div>
+                        <div class="stat-label">ساعة تعليمية</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% نجاح</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-cards">
+                    <div class="card-item math-card">
+                        <div class="card-icon"><i class="fas fa-square-root-alt"></i></div>
+                        <div class="card-title">رياضيات</div>
+                    </div>
+                    <div class="card-item physics-card">
+                        <div class="card-icon"><i class="fas fa-atom"></i></div>
+                        <div class="card-title">فيزياء</div>
+                    </div>
+                    <div class="card-item chemistry-card">
+                        <div class="card-icon"><i class="fas fa-flask"></i></div>
+                        <div class="card-title">كيمياء</div>
+                    </div>
+                </div>
+                <div class="hero-main-image">
+                    <img src="assistant/images/6b21731b-7c1a-4287-8fcf-d1e7a14efd2a-removebg-preview.png" alt="التعليم الحديث">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="hero-shapes">
+                    <div class="shape-circle"></div>
+                    <div class="shape-triangle"></div>
+                    <div class="shape-square"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم السنوات الدراسية -->
+    <section class="grades-section" id="grades">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">السنوات الدراسية</h2>
+                <p class="section-subtitle">اختر صفك الدراسي وابدأ رحلة التعلم</p>
+                <div class="section-decoration"></div>
+            </div>
+            <div class="grades-grid">
+                <div class="grade-card first-grade">
+                    <div class="grade-header">
+                        <div class="grade-icon"><i class="fas fa-award"></i></div>
+                        <h3 class="grade-title">الصف الأول الثانوي</h3>
+                    </div>
+                    <div class="grade-content">
+                        <ul class="grade-features">
+                            <li><i class="fas fa-check"></i> شرح كامل للمنهج بالتصفيل من الصفر</li>
+                            <li><i class="fas fa-check"></i> تمارين تفاعلية </li>
+                            <li><i class="fas fa-check"></i> اختبارات شهرية</li>
+                            <li><i class="fas fa-check"></i> مراجعات نهائية</li>
+                        </ul>
+                    </div>
+                    <div class="grade-footer">
+                        <a href="Grades/first-year.html" class="grade-btn">
+                            <span>عرض الكورسات</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="grade-decoration"></div>
+                </div>
+                
+                <div class="grade-card second-grade">
+                    <div class="grade-header">
+                        <div class="grade-icon"><i class="fas fa-medal"></i></div>
+                        <h3 class="grade-title">الصف الثاني الثانوي</h3>
+                    </div>
+                    <div class="grade-content">
+                        <ul class="grade-features">
+                            <li><i class="fas fa-check"></i> شرح كامل للمنهج</li>
+                            <li><i class="fas fa-check"></i> تمارين تفاعلية</li>
+                            <li><i class="fas fa-check"></i> اختبارات شهرية</li>
+                            <li><i class="fas fa-check"></i> مراجعات نهائية</li>
+                        </ul>
+                    </div>
+                    <div class="grade-footer">
+                        <a href="Grades/secound-year.html" class="grade-btn">
+                            <span>عرض الكورسات</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="grade-decoration"></div>
+                </div>
+                
+                <div class="grade-card third-grade">
+                    <div class="grade-header">
+                        <div class="grade-icon"><i class="fas fa-trophy"></i></div>
+                        <h3 class="grade-title">الصف الثالث الثانوي</h3>
+                    </div>
+                    <div class="grade-content">
+                        <ul class="grade-features">
+                            <li><i class="fas fa-check"></i> شرح كامل للمنهج</li>
+                            <li><i class="fas fa-check"></i> تمارين تفاعلية</li>
+                            <li><i class="fas fa-check"></i> اختبارات شهرية</li>
+                            <li><i class="fas fa-check"></i> مراجعات نهائية</li>
+                        </ul>
+                    </div>
+                    <div class="grade-footer">
+                        <a href="Grades/theard-year.html" class="grade-btn">
+                            <span>عرض الكورسات</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="grade-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features-section" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا منصتنا؟</h2>
+                <p class="section-subtitle">مميزات تجعلنا الأفضل</p>
+                <div class="section-decoration"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-circle"></div>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="feature-title">من افضل مدرسين الثانوي بشهاده الطلاب</h3>
+                    <p class="feature-description">معلم متخصص بخبرة طويلة في تدريس المنهج المصري</p>
+                    <div class="feature-animation"></div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-circle"></div>
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="feature-title">فيديوهات عالية الجودة</h3>
+                    <p class="feature-description">شرح مرئي متقن مع رسومات متحركة وتأثيرات بصرية</p>
+                    <div class="feature-animation"></div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-circle"></div>
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="feature-title">منصة تفاعلية</h3>
+                    <p class="feature-description">تمارين تفاعلية واختبارات إلكترونية بنتائج فورية</p>
+                    <div class="feature-animation"></div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-circle"></div>
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">دعم فني متكامل</h3>
+                    <p class="feature-description">فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
+                    <div class="feature-animation"></div>
+                </div>
+            </div>
+        </div>
+        <div class="features-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-title">تواصل معنا</h2>
+                    <p class="contact-subtitle">لديك استفسار أو اقتراح؟ نحن هنا لمساعدتك</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@eduo.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>الهاتف</h4>
+                            <p>+20 123 456 7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>العنوان</h4>
+                            <p>القاهرة، مصر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">اسمك الكريم</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">البريد الإلكتروني</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">موضوع الرسالة</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" required></textarea>
+                            <label for="message">رسالتك</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">
+                            <span>إرسال الرسالة</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
+                        <path d="M50 0 L100 50 L50 100 L0 50 Z" class="logo-path"></path>
+                    </svg>
+                    <span>إديو</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>المنصة</h4>
+                        <a href="#">عن المنصة</a>
+                        <a href="#">المدرسون</a>
+                        <a href="#">الأسعار</a>
+                        <a href="#">المميزات</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>الكورسات</h4>
+                        <a href="#">الصف الأول</a>
+                        <a href="#">الصف الثاني</a>
+                        <a href="#">الصف الثالث</a>
+                        <a href="#">الباقات</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>الدعم</h4>
+                        <a href="#">الأسئلة الشائعة</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <span class="copyright-inner">
+                        <p> <a href="#">Abdallah Sayed</a>&copy; Develop By</p>
+                    </span>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- مكتبات الأنيميشن -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- الملفات البرمجية -->
+    <script src="assistant/js/main.js"></script>
+</body>
+</html>
